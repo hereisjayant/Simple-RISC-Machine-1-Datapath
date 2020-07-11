@@ -145,25 +145,15 @@ module input_iface(clk, SW, datapath_in, write, vsel, loada, loadb, asel, bsel,
 endmodule
 
 
-module vDFFE(clk,load,in,out);
+module vDFF(clk,D,Q);
   parameter n=1;
   input clk;
-  input [n-1:0] in;
-  output [n-1:0] out;
-  reg [n-1:0] out;
-
-  wire [n-1:0] D;
-
-  always @(*) begin //this block checks the load input and accordingly changes the output
-    case(load)
-      1'b0: D= out; //when load is 0
-      1'b1: D= in;  //when load is 1
-      default: D= {n{1'bx}}; //detects errors
-    endcase
-  end
+  input [n-1:0] D;
+  output [n-1:0] Q;
+  reg [n-1:0] Q;
 
   always @(posedge clk)
-    out <= D;
+    Q <= D;
 endmodule
 
 
