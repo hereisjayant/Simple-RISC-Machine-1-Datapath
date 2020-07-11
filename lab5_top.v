@@ -1,24 +1,24 @@
 // INSTRUCTIONS:
 //
-// You can use this file to demo your Lab5 on your DE1-SoC.  You should NOT 
-// spend ANY time looking at this file until you have first read the Lab 5 
+// You can use this file to demo your Lab5 on your DE1-SoC.  You should NOT
+// spend ANY time looking at this file until you have first read the Lab 5
 // handout completely and especially Sections 3 (Lab Procedure) and Section 4
 // (which describes the marking scheme).
-// 
+//
 // If you prefer you can instead use your own version of lab5_top.v.
 //
 // You MUST submit whichever lab5_top.v you used during your demo with handin.
 //
 // If you DO use this file you will need to fill in the sseg module as by
-// default it will just print F's on HEX0 through HEX3.  Also, the signal 
-// names inside the lab5_top module may need to be change to match the 
+// default it will just print F's on HEX0 through HEX3.  Also, the signal
+// names inside the lab5_top module may need to be change to match the
 // ones you use in your own datapath module.
 
 
 
 // DE1-SOC INTERFACE SPECIFICATION for lab5_top.v code in this file:
 //
-// clk input to datpath has rising edge when KEY0 is *pressed* 
+// clk input to datpath has rising edge when KEY0 is *pressed*
 //
 // LEDR9 is the status register output (Z_out)
 //
@@ -36,7 +36,7 @@
 // means corresponding input has logic value of 1).
 //
 // control signal(s)  switch(es)
-// ~~~~~~~~~~~~~~~~~  ~~~~~~~~~       
+// ~~~~~~~~~~~~~~~~~  ~~~~~~~~~
 // <<register read stage>>
 //           readnum  SW[3:1]
 //             loada  SW[5]
@@ -49,7 +49,7 @@
 //             loadc  SW[7]
 //             loads  SW[8]
 // <<writeback stage>>
-//             write  SW[0]      
+//             write  SW[0]
 //          writenum  SW[3:1]
 //              vsel  SW[4]
 
@@ -57,8 +57,8 @@
 module lab5_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   input [3:0] KEY;
   input [9:0] SW;
-  
-  output [9:0] LEDR; 
+
+  output [9:0] LEDR;
   output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
   input CLOCK_50;
 
@@ -67,7 +67,7 @@ module lab5_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
   wire [2:0] readnum, writenum;
   wire [1:0] shift, ALUop;
 
-  input_iface IN(CLOCK_50, SW, datapath_in, write, vsel, loada, loadb, asel, 
+  input_iface IN(CLOCK_50, SW, datapath_in, write, vsel, loada, loadb, asel,
                  bsel, loadc, loads, readnum, writenum, shift, ALUop, LEDR[8:0]);
 
   datapath DP ( .clk         (~KEY[0]), // recall from Lab 4 that KEY0 is 1 when NOT pushed
@@ -88,7 +88,7 @@ module lab5_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
 
                 // set when "writing back" to register file
                 .writenum    (writenum),
-                .write       (write),  
+                .write       (write),
                 .datapath_in (datapath_in),
 
                 // outputs
@@ -97,7 +97,7 @@ module lab5_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
              );
 
   // fill in sseg to display 4-bits in hexidecimal 0,1,2...9,A,B,C,D,E,F
-  sseg H0(datapath_out[3:0],   HEX0);   
+  sseg H0(datapath_out[3:0],   HEX0);
   sseg H1(datapath_out[7:4],   HEX1);
   sseg H2(datapath_out[11:8],  HEX2);
   sseg H3(datapath_out[15:12], HEX3);
@@ -106,7 +106,7 @@ module lab5_top(KEY,SW,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,CLOCK_50);
 endmodule
 
 
-module input_iface(clk, SW, datapath_in, write, vsel, loada, loadb, asel, bsel, 
+module input_iface(clk, SW, datapath_in, write, vsel, loada, loadb, asel, bsel,
                    loadc, loads, readnum, writenum, shift, ALUop, LEDR);
   input clk;
   input [9:0] SW;
@@ -116,13 +116,13 @@ module input_iface(clk, SW, datapath_in, write, vsel, loada, loadb, asel, bsel,
   output [1:0] shift, ALUop;
   output [8:0] LEDR;
 
-  wire sel_sw = SW[9];  
+  wire sel_sw = SW[9];
 
   // When SW[9] is set to 1, SW[7:0] changes the lower 8 bits of datpath_in.
   wire [15:0] datapath_in_next = sel_sw ? {8'b0,SW[7:0]} : datapath_in;
   vDFF #(16) DATA(clk,datapath_in_next,datapath_in);
 
-  // When SW[9] is set to 0, SW[8:0] changes the control inputs 
+  // When SW[9] is set to 0, SW[8:0] changes the control inputs
   //
   wire [8:0] ctrl_sw;
   wire [8:0] ctrl_sw_next = sel_sw ? ctrl_sw : SW[8:0];
@@ -131,29 +131,39 @@ module input_iface(clk, SW, datapath_in, write, vsel, loada, loadb, asel, bsel,
   assign {readnum,vsel,loada,loadb,shift,asel,bsel,ALUop,loadc,loads,writenum,write}={
     // register operand fetch stage
     //     readnum       vsel        loada       loadb
-           ctrl_sw[3:1], ctrl_sw[4], ctrl_sw[5], ctrl_sw[6], 
+           ctrl_sw[3:1], ctrl_sw[4], ctrl_sw[5], ctrl_sw[6],
     // computation stage (sometimes called "execute")
     //     shift         asel        bse         ALUop         loadc       loads
-           ctrl_sw[2:1], ctrl_sw[3], ctrl_sw[4], ctrl_sw[6:5], ctrl_sw[7], ctrl_sw[8],  
+           ctrl_sw[2:1], ctrl_sw[3], ctrl_sw[4], ctrl_sw[6:5], ctrl_sw[7], ctrl_sw[8],
     // set when "writing back" to register file
     //   writenum        write
-           ctrl_sw[3:1], ctrl_sw[0]    
+           ctrl_sw[3:1], ctrl_sw[0]
   };
 
   // LEDR[7:0] shows other bits
-  assign LEDR = sel_sw ? ctrl_sw : {1'b0, datapath_in[7:0]};  
-endmodule         
+  assign LEDR = sel_sw ? ctrl_sw : {1'b0, datapath_in[7:0]};
+endmodule
 
 
-module vDFF(clk,D,Q);
+module vDFFE(clk,load,in,out);
   parameter n=1;
   input clk;
-  input [n-1:0] D;
-  output [n-1:0] Q;
-  reg [n-1:0] Q;
+  input [n-1:0] in;
+  output [n-1:0] out;
+  reg [n-1:0] out;
+
+  wire [n-1:0] D;
+
+  always @(*) begin //this block checks the load input and accordingly changes the output
+    case(load)
+      1'b0: D= out; //when load is 0
+      1'b1: D= in;  //when load is 1
+      default: D= {n{1'bx}}; //detects errors
+    endcase
+  end
 
   always @(posedge clk)
-    Q <= D;
+    out <= D;
 endmodule
 
 
@@ -169,11 +179,11 @@ module sseg(in,segs);
   output [6:0] segs;
 
   // NOTE: The code for sseg below is not complete: You can use your code from
-  // Lab4 to fill this in or code from someone else's Lab4.  
+  // Lab4 to fill this in or code from someone else's Lab4.
   //
   // IMPORTANT:  If you *do* use someone else's Lab4 code for the seven
   // segment display you *need* to state the following three things in
-  // a file README.txt that you submit with handin along with this code: 
+  // a file README.txt that you submit with handin along with this code:
   //
   //   1.  First and last name of student providing code
   //   2.  Student number of student providing code
@@ -213,6 +223,6 @@ module sseg(in,segs);
   //            14 | E
   //            15 | F
 
-  assign segs = 7'b0001110;  // this will output "F" 
+  assign segs = 7'b0001110;  // this will output "F"
 
 endmodule
