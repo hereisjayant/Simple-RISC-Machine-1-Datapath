@@ -64,26 +64,20 @@ endmodule
 
 
 //REGISTER with load enable
-module vDFFE(clk,load,in,out);
-  parameter n=1;
-  input clk, load;
-  input [n-1:0] in;
-  output [n-1:0] out;
-  reg [n-1:0] out;
+module vDFFE(clk, en, in, out) ;
+  parameter n = 1;  // width
+  input clk, en ;
+  input  [n-1:0] in ;
+  output [n-1:0] out ;
+  reg    [n-1:0] out ;
+  wire   [n-1:0] next_out ;
 
-  reg [n-1:0] D;
-
-  always @(*) begin //this block checks the load input and accordingly changes the output
-    case(load)
-      1'b0: D= out; //when load is 0
-      1'b1: D= in;  //when load is 1
-      default: D= {n{1'bx}}; //detects errors
-    endcase
-  end
+  assign next_out = en ? in : out;
 
   always @(posedge clk)
-    out <= D;
+    out = next_out;
 endmodule
+
 
 
 //multiplexer
