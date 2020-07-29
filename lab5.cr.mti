@@ -36,4 +36,11 @@ Top level modules:
 	lab5_check_2
 	lab5_check_3
 
+} {} {}} C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v {1 {vlog -work work -stats=none C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module regfile_tb
+
+Top level modules:
+	regfile_tb
+
 } {} {}}

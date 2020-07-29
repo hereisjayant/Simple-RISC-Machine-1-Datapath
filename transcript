@@ -164,3 +164,5 @@ run -all
 #    Time: 70 ps  Iteration: 0  Instance: /regfile_tb
 # Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 125
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN211/programs/lab5/RegfileWave.do
+# End time: 17:34:12 on Jul 29,2020, Elapsed time: 1:03:02
+# Errors: 0, Warnings: 0
