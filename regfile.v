@@ -9,12 +9,18 @@ module regfile(data_in,writenum,write,readnum,clk,data_out);
     output [15:0] data_out;
 
 //Wires
-    wire [7:0] decToAnd; //wire from the decoder to And gates
+  //wire from the decoder to And gates
+    wire [7:0] decToAnd;
+   //wires from the And gates to register
     wire [7:0] andToReg= {decToAnd[7]&write, decToAnd[6]&write,
                         decToAnd[5]&write,decToAnd[4]&write,
                         decToAnd[3]&write,decToAnd[2]&write,
-                        decToAnd[1]&write,decToAnd[0]&write}; //wires from the And gates to register
-    wire [7:0] regToMux;//wire form the register to the multiplexer
+                        decToAnd[1]&write,decToAnd[0]&write};
+  //wires form the registers to the multiplexer
+    wire [15:0] reg7ToMux, reg6ToMux,
+                reg5ToMux, reg4ToMux,
+                reg3ToMux, reg2ToMux,
+                reg1ToMux, reg0ToMux;
     wire [7:0] decToMux;
 
 //different Modules
@@ -23,23 +29,23 @@ module regfile(data_in,writenum,write,readnum,clk,data_out);
   Dec #(3,8) DecIn(writenum,decToAnd);
 
   //instantiating the registers
-  vDFFE #(16) R7(clk,andToReg[7],data_in,regToMux[7]);
-  vDFFE #(16) R6(clk,andToReg[6],data_in,regToMux[6]);
-  vDFFE #(16) R5(clk,andToReg[5],data_in,regToMux[5]);
-  vDFFE #(16) R4(clk,andToReg[4],data_in,regToMux[4]);
-  vDFFE #(16) R3(clk,andToReg[3],data_in,regToMux[3]);
-  vDFFE #(16) R2(clk,andToReg[2],data_in,regToMux[2]);
-  vDFFE #(16) R1(clk,andToReg[1],data_in,regToMux[1]);
-  vDFFE #(16) R0(clk,andToReg[0],data_in,regToMux[0]);
+  vDFFE #(16) R7(clk,andToReg[7],data_in,reg7ToMux);
+  vDFFE #(16) R6(clk,andToReg[6],data_in,reg6ToMux);
+  vDFFE #(16) R5(clk,andToReg[5],data_in,reg5ToMux);
+  vDFFE #(16) R4(clk,andToReg[4],data_in,reg4ToMux);
+  vDFFE #(16) R3(clk,andToReg[3],data_in,reg3ToMux);
+  vDFFE #(16) R2(clk,andToReg[2],data_in,reg2ToMux);
+  vDFFE #(16) R1(clk,andToReg[1],data_in,reg1ToMux);
+  vDFFE #(16) R0(clk,andToReg[0],data_in,reg0ToMux);
 
   //decoder for input to the multiplexer
   Dec #(3,8) DecMux(readnum,decToMux);
 
   //mux for the outputs from the registers
-  Mux8 #(16) MuxOut(regToMux[7],regToMux[6], //register inputs
-                    regToMux[5],regToMux[4],
-                    regToMux[3],regToMux[2],
-                    regToMux[1],regToMux[0],
+  Mux8 #(16) MuxOut(reg7ToMux,reg6ToMux, //register inputs
+                    reg5ToMux,reg4ToMux,
+                    reg3ToMux,reg2ToMux,
+                    reg1ToMux,reg0ToMux,
                      decToMux //select
                      , data_out) ; //output
 
