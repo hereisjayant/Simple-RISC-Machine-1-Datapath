@@ -126,3 +126,4 @@ write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/
 quit -sim
 # End time: 14:40:34 on Jul 30,2020, Elapsed time: 0:03:34
 # Errors: 0, Warnings: 0
+# Compile of datapath.v was successful.
