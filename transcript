@@ -82,3 +82,47 @@ write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/
 quit -sim
 # End time: 13:15:13 on Jul 30,2020, Elapsed time: 0:00:51
 # Errors: 0, Warnings: 0
+# Compile of shifter_tb.v failed with 1 errors.
+# Compile of shifter.v failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of shifter_tb.v was successful.
+# Compile of shifter.v failed with 5 errors.
+# 2 compiles, 1 failed with 5 errors.
+# Compile of shifter.v was successful.
+vsim -gui work.shifter_tb
+# vsim -gui work.shifter_tb 
+# Start time: 14:37:00 on Jul 30,2020
+# Loading work.shifter_tb
+# Loading work.shifter
+add wave -position end sim:/shifter_tb/*
+# Compile of lab5_autograder_check.v was successful.
+# Compile of lab5_top.v was successful.
+# Compile of lab5_top_tb.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of regfile_tb.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_tb.v was successful.
+# Compile of shifter_tb.v was successful.
+# Compile of shifter.v was successful.
+# 9 compiles, 0 failed with no errors.
+run -all
+# Do nothing: shift = 2'b00
+# B shifted left 1-bit, least significant bit is zero. shift = 2'b01
+# B shifted right 1-bit, most significant bit, MSB, is 0. shift = 2'b10
+# B shifted right 1-bit, MSB is copy of B[15]. shift = 2'b11
+restart -f
+# Loading work.shifter_tb
+# Loading work.shifter
+run -all
+# Do nothing: shift = 2'b00
+# B shifted left 1-bit, least significant bit is zero. shift = 2'b01
+# B shifted right 1-bit, most significant bit, MSB, is 0. shift = 2'b10
+# B shifted right 1-bit, MSB is copy of B[15]. shift = 2'b11
+# *ALL THE TESTS HAVE BEEN PASSED*
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter_tb.v(54)
+#    Time: 25 ps  Iteration: 0  Instance: /shifter_tb
+# Break in Module shifter_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter_tb.v line 54
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN211/programs/lab5/shifterWave.do
+quit -sim
+# End time: 14:40:34 on Jul 30,2020, Elapsed time: 0:03:34
+# Errors: 0, Warnings: 0

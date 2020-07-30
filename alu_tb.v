@@ -91,6 +91,9 @@ module ALU_tb();
     err = 1'b1;
   end
 
+  if( ~err ) $display("*ALL THE TESTS HAVE BEEN PASSED*");
+  $stop;
+
   end
 
 endmodule
