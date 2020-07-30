@@ -1,168 +1,84 @@
-# Compile of lab5_autograder_check.v was successful.
-# Compile of lab5_top.v was successful.
-# Compile of lab5_top_tb.sv was successful.
-# Compile of regfile.v was successful.
-# Compile of regfile_tb.v failed with 2 errors.
-# 5 compiles, 1 failed with 2 errors.
-# Compile of regfile_tb.v failed with 3 errors.
-# Compile of regfile_tb.v was successful.
-# Load canceled
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5.mpf
+# Loading project lab5
 # Compile of lab5_autograder_check.v was successful.
 # Compile of lab5_top.v was successful.
 # Compile of lab5_top_tb.sv was successful.
 # Compile of regfile.v was successful.
 # Compile of regfile_tb.v was successful.
-# 5 compiles, 0 failed with no errors.
-vsim -gui work.regfile_tb
-# vsim -gui work.regfile_tb 
-# Start time: 15:31:44 on Jul 29,2020
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(26): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R7 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(27): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R6 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(28): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R5 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(29): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R4 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(30): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(31): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R2 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(32): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(33): [PCDPC] - Port size (16) does not match connection size (1) for port 'out'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(67).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/R0 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a7'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a6'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a5'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a4'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a3'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a2'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a1'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
-# ** Warning: (vsim-3015) C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(39): [PCDPC] - Port size (16) does not match connection size (1) for port 'a0'. The port definition is at: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v(84).
-#    Time: 0 ps  Iteration: 0  Instance: /regfile_tb/dut/MuxOut File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v
+# Compile of alu.v failed with 1 errors.
+# Compile of alu_tb.v failed with 1 errors.
+# 7 compiles, 2 failed with 2 errors.
+# Compile of lab5_autograder_check.v was successful.
+# Compile of lab5_top.v was successful.
+# Compile of lab5_top_tb.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of regfile_tb.v was successful.
+# Compile of alu.v failed with 2 errors.
+# Compile of alu_tb.v was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of lab5_autograder_check.v was successful.
+# Compile of lab5_top.v was successful.
+# Compile of lab5_top_tb.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of regfile_tb.v was successful.
+# Compile of alu.v failed with 2 errors.
+# Compile of alu_tb.v was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of lab5_autograder_check.v was successful.
+# Compile of lab5_top.v was successful.
+# Compile of lab5_top_tb.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of regfile_tb.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_tb.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of alu_tb.v was successful.
+vsim -gui work.ALU_tb
+# vsim -gui work.ALU_tb 
+# Start time: 13:01:07 on Jul 30,2020
+# Loading work.ALU_tb
+# Loading work.ALU
+add wave -position end sim:/ALU_tb/*
+run -all
+# Adding 5 and 7
+# SUBTRACTing 3 from 10
+# ANDing 15 = 0b001111 and 60 = 0b111100
+# Finding the inverse of 16'b0000_0000_1111_1111
+# Checking the value for Z
+# Compile of lab5_autograder_check.v was successful.
+# Compile of lab5_top.v was successful.
+# Compile of lab5_top_tb.sv was successful.
+# Compile of regfile.v was successful.
+# Compile of regfile_tb.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_tb.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# Loading work.ALU_tb
+# Loading work.ALU
+run -all
+# Adding 5 and 7
+# SUBTRACTing 3 from 10
+# ANDing 15 = 0b001111 and 60 = 0b111100
+# Finding the inverse of 16'b0000_0000_1111_1111
+# Checking the value for Z
 quit -sim
-# End time: 16:29:32 on Jul 29,2020, Elapsed time: 0:57:48
-# Errors: 0, Warnings: 16
-# Compile of regfile.v failed with 1 errors.
-# Compile of regfile.v was successful.
-vsim -gui work.regfile_tb
-# vsim -gui work.regfile_tb 
-# Start time: 16:31:10 on Jul 29,2020
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-add wave -position insertpoint sim:/regfile_tb/*
+# End time: 13:12:08 on Jul 30,2020, Elapsed time: 0:11:01
+# Errors: 0, Warnings: 0
+vsim -gui work.ALU_tb
+# vsim -gui work.ALU_tb 
+# Start time: 13:14:22 on Jul 30,2020
+# Loading work.ALU_tb
+# Loading work.ALU
+add wave -position end sim:/ALU_tb/*
 run -all
-# Writing 5 to R0
-# Writing 7 to R1
-# Writing 12 to R7
-# Not writing 3 to R1
-# ERROR ** The data_out is xxxxxxxxxxxxxxxx, expected 0000000000000101
-# ERROR ** The data_out is xxxxxxxxxxxxxxxx, expected 0000000000000111
-# ERROR ** The data_out is xxxxxxxxxxxxxxxx, expected 0000000000001100
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v(116)
-#    Time: 40 ps  Iteration: 0  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 116
-# Compile of lab5_autograder_check.v was successful.
-# Compile of lab5_top.v was successful.
-# Compile of lab5_top_tb.sv was successful.
-# Compile of regfile.v was successful.
-# Compile of regfile_tb.v was successful.
-# 5 compiles, 0 failed with no errors.
-restart -f
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-run -all
-# Writing 5 to R0
-# Writing 7 to R1
-# Writing 12 to R7
-# Not writing 3 to R1
-# ERROR ** The data_out is xxxxxxxxxxxxxxxx, expected 0000000000000101
-# ERROR ** The data_out is 0000000000000101, expected 0000000000000111
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v(122)
-#    Time: 70 ps  Iteration: 0  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 122
-add wave -position end  sim:/regfile_tb/dut/R7/in
-add wave -position end  sim:/regfile_tb/dut/R1/in
-add wave -position end  sim:/regfile_tb/dut/R0/in
-run -all
-# Break key hit
-# Simulation stop requested.
-restart -f
-run -all
-# Writing 5 to R0
-# Writing 7 to R1
-# Writing 12 to R7
-# Not writing 3 to R1
-# ERROR ** The data_out is xxxxxxxxxxxxxxxx, expected 0000000000000101
-# ERROR ** The data_out is 0000000000000101, expected 0000000000000111
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v(122)
-#    Time: 70 ps  Iteration: 0  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 122
-restart -f
-# Compile of lab5_autograder_check.v was successful.
-# Compile of lab5_top.v was successful.
-# Compile of lab5_top_tb.sv was successful.
-# Compile of regfile.v was successful.
-# Compile of regfile_tb.v was successful.
-# 5 compiles, 0 failed with no errors.
-restart -f
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-add wave -position end  sim:/regfile_tb/dut/R7/out
-add wave -position end  sim:/regfile_tb/dut/R1/out
-add wave -position end  sim:/regfile_tb/dut/R0/out
-run -all
-# Writing 5 to R0
-# Writing 7 to R1
-# Writing 12 to R7
-# Not writing 3 to R1
-# ERROR ** The data_out is 0000000000001100, expected 0000000000001100
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v(125)
-#    Time: 70 ps  Iteration: 0  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 125
-# Compile of lab5_autograder_check.v was successful.
-# Compile of lab5_top.v was successful.
-# Compile of lab5_top_tb.sv was successful.
-# Compile of regfile.v was successful.
-# Compile of regfile_tb.v was successful.
-# 5 compiles, 0 failed with no errors.
-restart -f
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-run -all
-# Writing 5 to R0
-# Writing 7 to R1
-# Writing 12 to R7
-# Not writing 3 to R1
-# *ALL THE TESTS HAVE BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v(125)
-#    Time: 70 ps  Iteration: 0  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 125
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN211/programs/lab5/RegfileWave.do
-# End time: 17:34:12 on Jul 29,2020, Elapsed time: 1:03:02
+# Adding 5 and 7
+# SUBTRACTing 3 from 10
+# ANDing 15 = 0b001111 and 60 = 0b111100
+# Finding the inverse of 16'b0000_0000_1111_1111
+# Checking the value for Z
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN211/programs/lab5/ALUwave.do
+quit -sim
+# End time: 13:15:13 on Jul 30,2020, Elapsed time: 0:00:51
 # Errors: 0, Warnings: 0
