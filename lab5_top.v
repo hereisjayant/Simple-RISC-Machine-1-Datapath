@@ -157,6 +157,23 @@ module vDFF(clk,D,Q);
 endmodule
 
 
+
+
+//defining the codes for the HEX display
+
+  `define N0 7'b100_0000 //0
+  `define N1 7'b100_1111 //1
+  `define N2 7'b010_0100 //2
+  `define N3 7'b011_0000 //3
+  `define N4 7'b001_1001 //4
+  `define N5 7'b001_0010 //5
+  `define N6 7'b000_0010 //6
+  `define N7 7'b111_1000 //7
+  `define N8 7'b000_0000 //8
+  `define N9 7'b001_0000 //9
+
+
+
 // The sseg module below can be used to display the value of datpath_out on
 // the hex LEDS the input is a 4-bit value representing numbers between 0 and
 // 15 the output is a 7-bit value that will print a hexadecimal digit.  You
@@ -167,6 +184,8 @@ endmodule
 module sseg(in,segs);
   input [3:0] in;
   output [6:0] segs;
+
+  reg [6:0] segs;
 
   // NOTE: The code for sseg below is not complete: You can use your code from
   // Lab4 to fill this in or code from someone else's Lab4.
@@ -213,6 +232,20 @@ module sseg(in,segs);
   //            14 | E
   //            15 | F
 
-  assign segs = 7'b0001110;  // this will output "F"
+  always @ ( * ) begin
+    case (in)
+      7'd0: segs = `N0;
+      7'd1: segs = `N1;
+      7'd2: segs = `N2;
+      7'd3: segs = `N3;
+      7'd4: segs = `N4;
+      7'd5: segs = `N5;
+      7'd6: segs = `N6;
+      7'd7: segs = `N7;
+      7'd8: segs = `N8;
+      7'd9: segs = `N9;
+      default: segs = 7'b0001110;  // this will output "F"
+    endcase
+  end
 
 endmodule
