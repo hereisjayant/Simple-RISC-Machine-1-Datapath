@@ -331,3 +331,6 @@ run -all
 #    Time: 80 ps  Iteration: 0  Instance: /datapath_tb
 # Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath_tb.v line 171
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN211/programs/lab5/DatapathWave.do
+quit -sim
+# End time: 17:21:53 on Jul 31,2020, Elapsed time: 1:04:41
+# Errors: 0, Warnings: 0

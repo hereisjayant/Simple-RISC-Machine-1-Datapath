@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5_top
-Wed Jul 29 22:29:03 2020
+Fri Jul 31 16:52:07 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,37 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: input_iface:IN|vDFF:DATA
+ 12. Parameter Settings for User Entity Instance: input_iface:IN|vDFF:CTRL
+ 13. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|Dec:DecIn
+ 14. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R7
+ 15. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R6
+ 16. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R5
+ 17. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R4
+ 18. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R3
+ 19. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R2
+ 20. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R1
+ 21. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R0
+ 22. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|Dec:DecMux
+ 23. Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|Mux8:MuxOut
+ 24. Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegLoadA
+ 25. Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegLoadB
+ 26. Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegLoadC
+ 27. Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegStatus
+ 28. Parameter Settings for User Entity Instance: datapath:DP|Mux2a:BeforeRegfile
+ 29. Parameter Settings for User Entity Instance: datapath:DP|Mux2a:toAin
+ 30. Parameter Settings for User Entity Instance: datapath:DP|Mux2a:toBin
+ 31. Port Connectivity Checks: "datapath:DP|Mux2a:toBin"
+ 32. Port Connectivity Checks: "datapath:DP|Mux2a:toAin"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +63,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Jul 29 22:29:03 2020           ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; lab5_top                                    ;
-; Top-level Entity Name       ; lab5_top                                    ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jul 31 16:52:07 2020       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; lab5_top                                    ;
+; Top-level Entity Name           ; lab5_top                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 194                                         ;
+; Total pins                      ; 67                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -147,11 +182,385 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
+; regfile.v                        ; yes             ; User Verilog HDL File        ; C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v  ;         ;
+; lab5_top.v                       ; yes             ; User Verilog HDL File        ; C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v ;         ;
+; datapath.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v ;         ;
+; alu.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/herei/Desktop/CPEN211/programs/lab5/alu.v      ;         ;
+; shifter.v                        ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter.v  ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 141          ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 191          ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 41           ;
+;     -- 5 input functions                    ; 38           ;
+;     -- 4 input functions                    ; 57           ;
+;     -- <=3 input functions                  ; 55           ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 194          ;
+;                                             ;              ;
+; I/O pins                                    ; 67           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 177          ;
+; Total fan-out                               ; 1548         ;
+; Average fan-out                             ; 2.98         ;
++---------------------------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-------------+--------------+
+; |lab5_top                   ; 191 (0)             ; 194 (0)                   ; 0                 ; 0          ; 67   ; 0            ; |lab5_top                                         ; lab5_top    ; work         ;
+;    |datapath:DP|            ; 154 (0)             ; 177 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP                             ; datapath    ; work         ;
+;       |ALU:alu|             ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|ALU:alu                     ; ALU         ; work         ;
+;       |Mux2a:BeforeRegfile| ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|Mux2a:BeforeRegfile         ; Mux2a       ; work         ;
+;       |Mux2a:toAin|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|Mux2a:toAin                 ; Mux2a       ; work         ;
+;       |Mux2a:toBin|         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|Mux2a:toBin                 ; Mux2a       ; work         ;
+;       |regfile:REGFILE|     ; 59 (9)              ; 128 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE             ; regfile     ; work         ;
+;          |Dec:DecMux|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|Dec:DecMux  ; Dec         ; work         ;
+;          |Mux8:MuxOut|      ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|Mux8:MuxOut ; Mux8        ; work         ;
+;          |vDFFE:R0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R0    ; vDFFE       ; work         ;
+;          |vDFFE:R1|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R1    ; vDFFE       ; work         ;
+;          |vDFFE:R2|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R2    ; vDFFE       ; work         ;
+;          |vDFFE:R3|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R3    ; vDFFE       ; work         ;
+;          |vDFFE:R4|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R4    ; vDFFE       ; work         ;
+;          |vDFFE:R5|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R5    ; vDFFE       ; work         ;
+;          |vDFFE:R6|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R6    ; vDFFE       ; work         ;
+;          |vDFFE:R7|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|regfile:REGFILE|vDFFE:R7    ; vDFFE       ; work         ;
+;       |shifter:SHIFTER|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|shifter:SHIFTER             ; shifter     ; work         ;
+;       |vDFFE:RegLoadA|      ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|vDFFE:RegLoadA              ; vDFFE       ; work         ;
+;       |vDFFE:RegLoadB|      ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|vDFFE:RegLoadB              ; vDFFE       ; work         ;
+;       |vDFFE:RegLoadC|      ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|vDFFE:RegLoadC              ; vDFFE       ; work         ;
+;       |vDFFE:RegStatus|     ; 15 (15)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|datapath:DP|vDFFE:RegStatus             ; vDFFE       ; work         ;
+;    |input_iface:IN|         ; 9 (9)               ; 17 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|input_iface:IN                          ; input_iface ; work         ;
+;       |vDFF:CTRL|           ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|input_iface:IN|vDFF:CTRL                ; vDFF        ; work         ;
+;       |vDFF:DATA|           ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|input_iface:IN|vDFF:DATA                ; vDFF        ; work         ;
+;    |sseg:H0|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|sseg:H0                                 ; sseg        ; work         ;
+;    |sseg:H1|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|sseg:H1                                 ; sseg        ; work         ;
+;    |sseg:H2|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|sseg:H2                                 ; sseg        ; work         ;
+;    |sseg:H3|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |lab5_top|sseg:H3                                 ; sseg        ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; input_iface:IN|vDFF:DATA|Q[8..15]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 194   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 193   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |lab5_top|datapath:DP|ALU:alu|Mux1                           ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |lab5_top|datapath:DP|Mux2a:toBin|b[5]                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |lab5_top|datapath:DP|Mux2a:toBin|b[1]                       ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |lab5_top|datapath:DP|regfile:REGFILE|Mux8:MuxOut|Selector10 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: input_iface:IN|vDFF:DATA ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 16    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: input_iface:IN|vDFF:CTRL ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 9     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|Dec:DecIn ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                            ;
+; m              ; 8     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R7 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R6 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R5 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R4 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R3 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R2 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R1 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|vDFFE:R0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|Dec:DecMux ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                             ;
+; m              ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|regfile:REGFILE|Mux8:MuxOut ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; k              ; 16    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegLoadA ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegLoadB ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegLoadC ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n              ; 16    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|vDFFE:RegStatus ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 1     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|Mux2a:BeforeRegfile ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; k              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|Mux2a:toAin ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; k              ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:DP|Mux2a:toBin ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; k              ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "datapath:DP|Mux2a:toBin" ;
++-----------+-------+----------+----------------------+
+; Port      ; Type  ; Severity ; Details              ;
++-----------+-------+----------+----------------------+
+; a1[15..5] ; Input ; Info     ; Stuck at GND         ;
++-----------+-------+----------+----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "datapath:DP|Mux2a:toAin" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; a1   ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 194                         ;
+;     ENA               ; 177                         ;
+;     ENA SLD           ; 16                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 196                         ;
+;     arith             ; 17                          ;
+;         1 data inputs ; 1                           ;
+;         4 data inputs ; 14                          ;
+;         5 data inputs ; 2                           ;
+;     normal            ; 179                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 43                          ;
+;         5 data inputs ; 36                          ;
+;         6 data inputs ; 41                          ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.30                        ;
+; Average LUT depth     ; 3.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -160,7 +569,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jul 29 22:28:29 2020
+    Info: Processing started: Fri Jul 31 16:51:28 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -177,7 +586,7 @@ Info (12021): Found 4 design units, including 4 entities, in source file lab5_to
     Info (12023): Found entity 1: lab5_top File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 57
     Info (12023): Found entity 2: input_iface File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 109
     Info (12023): Found entity 3: vDFF File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 148
-    Info (12023): Found entity 4: sseg File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 167
+    Info (12023): Found entity 4: sseg File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 184
 Info (12021): Found 3 design units, including 3 entities, in source file lab5_autograder_check.v
     Info (12023): Found entity 1: lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v Line: 1
     Info (12023): Found entity 2: lab5_check_2 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v Line: 53
@@ -186,12 +595,55 @@ Info (12127): Elaborating entity "lab5_top" for the top level hierarchy
 Info (12128): Elaborating entity "input_iface" for hierarchy "input_iface:IN" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 71
 Info (12128): Elaborating entity "vDFF" for hierarchy "input_iface:IN|vDFF:DATA" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 123
 Info (12128): Elaborating entity "vDFF" for hierarchy "input_iface:IN|vDFF:CTRL" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 129
+Warning (12125): Using design file datapath.v, which is not specified as a design file for the current project, but contains definitions for 2 design units and 2 entities in project
+    Info (12023): Found entity 1: datapath File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 3
+    Info (12023): Found entity 2: Mux2a File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 136
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:DP" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 97
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:DP|regfile:REGFILE" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 84
+Info (12128): Elaborating entity "Dec" for hierarchy "datapath:DP|regfile:REGFILE|Dec:DecIn" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v Line: 29
+Warning (10230): Verilog HDL assignment warning at regfile.v(68): truncated value with size 32 to match size of target (8) File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v Line: 68
+Info (12128): Elaborating entity "vDFFE" for hierarchy "datapath:DP|regfile:REGFILE|vDFFE:R7" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v Line: 32
+Info (12128): Elaborating entity "Mux8" for hierarchy "datapath:DP|regfile:REGFILE|Mux8:MuxOut" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v Line: 50
+Info (10264): Verilog HDL Case Statement information at regfile.v(98): all case item expressions in this case statement are onehot File: C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v Line: 98
+Warning (12125): Using design file alu.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU File: C:/Users/herei/Desktop/CPEN211/programs/lab5/alu.v Line: 3
+Info (12128): Elaborating entity "ALU" for hierarchy "datapath:DP|ALU:alu" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 86
+Warning (12125): Using design file shifter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: shifter File: C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter.v Line: 3
+Info (12128): Elaborating entity "shifter" for hierarchy "datapath:DP|shifter:SHIFTER" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 88
+Info (12128): Elaborating entity "vDFFE" for hierarchy "datapath:DP|vDFFE:RegStatus" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 111
+Info (12128): Elaborating entity "Mux2a" for hierarchy "datapath:DP|Mux2a:BeforeRegfile" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath.v Line: 116
 Info (12128): Elaborating entity "sseg" for hierarchy "sseg:H0" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 100
-Error (12006): Node instance "DP" instantiates undefined entity "datapath". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 97
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4788 megabytes
-    Error: Processing ended: Wed Jul 29 22:29:03 2020
-    Error: Elapsed time: 00:00:34
-    Error: Total CPU time (on all processors): 00:01:16
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 62
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 58
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 58
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_top.v Line: 58
+Info (21057): Implemented 451 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 384 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Fri Jul 31 16:52:07 2020
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:01:14
 
 
