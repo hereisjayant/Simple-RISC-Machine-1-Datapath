@@ -301,3 +301,33 @@ quit -sim
 # End time: 16:08:40 on Jul 31,2020, Elapsed time: 0:06:36
 # Errors: 0, Warnings: 0
 # Compile of datapath_tb.v was successful.
+vsim -gui work.datapath_tb
+# vsim -gui work.datapath_tb 
+# Start time: 16:17:12 on Jul 31,2020
+# Loading work.datapath_tb
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.vDFFE
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.shifter
+# Loading work.Mux2a
+run -all
+# *THE TEST HAS BEEN PASSED*
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath_tb.v(171)
+#    Time: 80 ps  Iteration: 0  Instance: /datapath_tb
+# Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath_tb.v line 171
+add wave -position end sim:/datapath_tb/*
+run -all
+# Break key hit
+# Break in Module vDFFE at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile.v line 83
+restart -f
+restart -f
+restart -f
+run -all
+# *THE TEST HAS BEEN PASSED*
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath_tb.v(171)
+#    Time: 80 ps  Iteration: 0  Instance: /datapath_tb
+# Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/datapath_tb.v line 171
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/herei/Desktop/CPEN211/programs/lab5/DatapathWave.do
