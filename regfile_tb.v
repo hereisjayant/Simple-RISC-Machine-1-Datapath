@@ -14,7 +14,7 @@ module regfile_tb();
   reg err; // This siganl tests for errors
   wire [15:0] data_out;
 
-  regfile dut(data_in,writenum,write,readnum,clk,data_out); //creating a module
+  regfile DUT(data_in,writenum,write,readnum,clk,data_out); //creating a module
 
   //clock
   initial begin

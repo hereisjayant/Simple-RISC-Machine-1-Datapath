@@ -17,10 +17,10 @@ module regfile(data_in,writenum,write,readnum,clk,data_out);
                         decToAnd[3]&write,decToAnd[2]&write,
                         decToAnd[1]&write,decToAnd[0]&write};
   //wires form the registers to the multiplexer
-    wire [15:0] reg7ToMux, reg6ToMux,
-                reg5ToMux, reg4ToMux,
-                reg3ToMux, reg2ToMux,
-                reg1ToMux, reg0ToMux;
+    wire [15:0] R7, R6,
+                R5, R4,
+                R3, R2,
+                R1, R0;
     wire [7:0] decToMux;
 
 //different Modules
@@ -29,23 +29,23 @@ module regfile(data_in,writenum,write,readnum,clk,data_out);
   Dec #(3,8) DecIn(writenum,decToAnd);
 
   //instantiating the registers
-  vDFFE #(16) R7(clk,andToReg[7],data_in,reg7ToMux);
-  vDFFE #(16) R6(clk,andToReg[6],data_in,reg6ToMux);
-  vDFFE #(16) R5(clk,andToReg[5],data_in,reg5ToMux);
-  vDFFE #(16) R4(clk,andToReg[4],data_in,reg4ToMux);
-  vDFFE #(16) R3(clk,andToReg[3],data_in,reg3ToMux);
-  vDFFE #(16) R2(clk,andToReg[2],data_in,reg2ToMux);
-  vDFFE #(16) R1(clk,andToReg[1],data_in,reg1ToMux);
-  vDFFE #(16) R0(clk,andToReg[0],data_in,reg0ToMux);
+  vDFFE #(16) REG7(clk,andToReg[7],data_in,R7);
+  vDFFE #(16) REG6(clk,andToReg[6],data_in,R6);
+  vDFFE #(16) REG5(clk,andToReg[5],data_in,R5);
+  vDFFE #(16) REG4(clk,andToReg[4],data_in,R4);
+  vDFFE #(16) REG3(clk,andToReg[3],data_in,R3);
+  vDFFE #(16) REG2(clk,andToReg[2],data_in,R2);
+  vDFFE #(16) REG1(clk,andToReg[1],data_in,R1);
+  vDFFE #(16) REG0(clk,andToReg[0],data_in,R0);
 
   //decoder for input to the multiplexer
   Dec #(3,8) DecMux(readnum,decToMux);
 
   //mux for the outputs from the registers
-  Mux8 #(16) MuxOut(reg7ToMux,reg6ToMux, //register inputs
-                    reg5ToMux,reg4ToMux,
-                    reg3ToMux,reg2ToMux,
-                    reg1ToMux,reg0ToMux,
+  Mux8 #(16) MuxOut(R7,R6, //register inputs
+                    R5,R4,
+                    R3,R2,
+                    R1,R0,
                      decToMux //select
                      , data_out) ; //output
 

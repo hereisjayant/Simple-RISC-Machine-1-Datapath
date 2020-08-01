@@ -36,7 +36,7 @@ module datapath_tb();
 
 
 //instantiating the datapath
- datapath dut(datapath_in,  //input to datapath
+ datapath DUT(datapath_in,  //input to datapath
 
                  vsel, //input to the first multiplexer b4 regfile
 

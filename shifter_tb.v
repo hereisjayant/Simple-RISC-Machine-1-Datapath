@@ -7,7 +7,7 @@ module shifter_tb();
   reg err;
   wire [15:0] sout;
 
-  shifter dut(in,shift,sout);
+  shifter DUT(in,shift,sout);
 
   initial begin
     err = 1'b0;//Sets the err signal to 0 initially

@@ -8,7 +8,7 @@ module ALU_tb();
   wire [15:0] out;
   wire Z;
 
-  ALU dut(Ain,Bin,ALUop,out,Z);
+  ALU DUT(Ain,Bin,ALUop,out,Z);
 
   initial begin
 
