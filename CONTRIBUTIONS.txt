@@ -1,0 +1,4 @@
+Student ID: 57983801:
+
+Designed and coded the required modules and testbenches, compiled the design.
+Saved the wave.do files. Simulated in Quartus and tested it on DE1-SoC.

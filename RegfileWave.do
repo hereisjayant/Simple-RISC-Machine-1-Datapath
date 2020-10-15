@@ -7,9 +7,9 @@ add wave -noupdate /regfile_tb/write
 add wave -noupdate /regfile_tb/clk
 add wave -noupdate /regfile_tb/err
 add wave -noupdate /regfile_tb/data_out
-add wave -noupdate /regfile_tb/dut/R7/out
-add wave -noupdate /regfile_tb/dut/R1/out
-add wave -noupdate /regfile_tb/dut/R0/out
+add wave -noupdate /regfile_tb/DUT/R7
+add wave -noupdate /regfile_tb/DUT/R1
+add wave -noupdate /regfile_tb/DUT/R0
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 1
