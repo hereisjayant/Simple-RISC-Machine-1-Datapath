@@ -1,59 +1,16 @@
+// WARNING: This is NOT the autograder that will be used mark you.  
+// Passing the checks in this file does NOT (in any way) guarantee you 
+// will not lose marks when your code is run through the actual autograder.  
+// You are responsible for designing your own test benches to verify you 
+// match the specification given earlier.
+
 module lab5_check_1;
-  // checks your unit level test benches for compatibility with autograder
-
-  // instantiate test benches (should have no inputs or outputs)
-  regfile_tb  T1();
-  shifter_tb  T2();
-  ALU_tb      T3();
-
-  // i/o signals for register file 
-  wire [15:0] data_in  = T1.DUT.data_in;
-  wire [2:0]  writenum = T1.DUT.writenum;
-  wire        write    = T1.DUT.write;
-  wire [2:0]  readnum  = T1.DUT.readnum;
-  wire        clk      = T1.DUT.clk;
-  wire [15:0] data_out = T1.DUT.data_out;
-  wire        err_rf   = T1.err;
-
-  // i/o signals for shifter module
-  wire [15:0] in     = T2.DUT.in;
-  wire [1:0]  shift  = T2.DUT.shift;
-  wire [15:0] sout   = T2.DUT.sout;
-  wire        err_sh = T2.err;
-
-  // i/o signals for ALU module
-  wire [15:0] Ain     = T3.DUT.Ain;
-  wire [15:0] Bin     = T3.DUT.Bin;
-  wire [1:0]  ALUop   = T3.DUT.ALUop;
-  wire [15:0] out     = T3.DUT.out;
-  wire        Z       = T3.DUT.Z;
-  wire        err_ALU = T3.err;
-
-  // autograder will examine changes in inputs to device under test to see how many cases you cover
-  always @(*) $display("REG: %b %b %b %b %b %b %b", err, clk, data_in, writenum, write, readnum, data_out);
-  always @(*) $display("SFT: %b %b %b %b",          err, in, shift, sout);
-  always @(*) $display("ALU: %b %b %b %b %b %b",    err, Ain, Bin, ALUop, out, Z);
-
-  initial begin
-    #500; // limit tests to 500 time units
-    $display("CHECK #1 DONE: Your unit level testbenches appear compatible with the autograder.");
-    $display("** NOTE ** You must manually verify you had no simulation warnings");
-    $display("by looking above this line in the transcript window in ModelSim.");
-    $stop;
-  end
-
-  // stop one time unit after any error detected 
-  wire err = err_rf | err_sh | err_ALU;
-  always @(posedge err) begin
-    #1;
-    $stop;
-  end
-endmodule
-
-module lab5_check_2;
   // checks register file, alu and shifter for compatibility with autograder
 
-  // WARNING: While this single module checks the interface of your register
+  // WARNING: Passing the checks in this module does NOT guarantee you will not
+  // lose marks!!!
+  //
+  // While this single module checks the interface of your register
   // file, shifter and ALU to verify compatibility with the CPEN 211 
   // autograder, for Lab 5 you should create separate unit level test benches
   // for your register file, shifter and ALU.
@@ -115,18 +72,97 @@ module lab5_check_2;
     end
 
     if (err === 0) begin
-      $display("CHECK #2 DONE: Your register file, shifter and ALU appear compatible with the");
+      $display("CHECK #1 DONE: Your register file, shifter and ALU appear compatible with the");
       $display("autograder. ** NOTE ** You must also manually verify you had no simulation");
       $display("warnings (above) and that you have no inferred latches (e.g., using Quartus).");
     end  
 
     $stop;
   end
+endmodule
 
+module lab5_check_2;
+  // WARNING: Passing the checks in this module does NOT guarantee you will not
+  // lose marks!!!
+  //
+  // checks your unit level test benches for compatibility with autograder
+
+  // instantiate test benches (should have no inputs or outputs)
+  regfile_tb  T1();
+  shifter_tb  T2();
+  ALU_tb      T3();
+
+  // i/o signals for register file 
+  wire [15:0] data_in  = T1.DUT.data_in;
+  wire [2:0]  writenum = T1.DUT.writenum;
+  wire        write    = T1.DUT.write;
+  wire [2:0]  readnum  = T1.DUT.readnum;
+  wire        clk      = T1.DUT.clk;
+  wire [15:0] data_out = T1.DUT.data_out;
+  wire        err_rf   = T1.err;
+
+  // i/o signals for shifter module
+  wire [15:0] in     = T2.DUT.in;
+  wire [1:0]  shift  = T2.DUT.shift;
+  wire [15:0] sout   = T2.DUT.sout;
+  wire        err_sh = T2.err;
+
+  // i/o signals for ALU module
+  wire [15:0] Ain     = T3.DUT.Ain;
+  wire [15:0] Bin     = T3.DUT.Bin;
+  wire [1:0]  ALUop   = T3.DUT.ALUop;
+  wire [15:0] out     = T3.DUT.out;
+  wire        Z       = T3.DUT.Z;
+  wire        err_ALU = T3.err;
+
+  // autograder may examine changes in inputs to device under test to see how many cases you cover
+  always @(*) $display("REG: %b %b %b %b %b %b %b", err, clk, data_in, writenum, write, readnum, data_out);
+  always @(*) $display("SFT: %b %b %b %b",          err, in, shift, sout);
+  always @(*) $display("ALU: %b %b %b %b %b %b",    err, Ain, Bin, ALUop, out, Z);
+
+  initial begin
+    #500; // your test benches should finish all tests before time 500 then keep running to time 500
+    $display("CHECK #2 DONE: Your unit level testbenches appear compatible with the autograder.");
+    $display("** NOTE ** You must manually verify you had no simulation warnings");
+    $display("by looking above this line in the transcript window in ModelSim.");
+    $stop;
+  end
+
+  // stop one time unit after any error detected 
+  wire err = err_rf | err_sh | err_ALU;
+  always @(posedge err) begin
+    #1;
+    $stop;
+  end
 endmodule
 
 
 module lab5_check_3;
+  // WARNING: Passing the checks in this module does NOT guarantee you will not
+  // lose marks!!!
+  //
+  // checks datapath_tb for compatibility with autograder
+    
+  // instantiate datapath test bench (should have no inputs or outputs)
+  datapath_tb  TB();
+  wire tb_err   = TB.err;
+
+  initial begin
+    #500; // your test benches should finish all tests before time 500 then keep running to time 500
+    $display("CHECK #3 DONE: Your datapath testbench appears compatible with the autograder.");
+    $display("** NOTE ** You must manually verify you had no simulation warnings");
+    $display("by looking above this line in the transcript window in ModelSim.");
+    $stop;
+  end
+
+  // stop one time unit after error detected 
+  always @(posedge tb_err) begin
+    #1;
+    $stop;
+  end
+endmodule  
+
+module lab5_check_4;
   // checks datapath for compatibility with autograder
 
   reg clk;

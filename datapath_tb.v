@@ -162,8 +162,8 @@ module datapath_tb();
     #10;
 
     //Checking if the outout stored in reg2 is equal to 16
-    if( dut.data_out !== 16'd16 ) begin
-       $display("ERROR ** The data_out is %b, expected %b", dut.data_out, 16'b0000_0000_0001_0000 );
+    if( DUT.data_out !== 16'd16 ) begin
+       $display("ERROR ** The data_out is %b, expected %b", DUT.data_out, 16'b0000_0000_0001_0000 );
        err = 1'b1;
     end
 

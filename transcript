@@ -1,51 +1,58 @@
 # Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
-# OpenFile C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5.mpf
+# OpenFile C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/lab5.mpf
 # Loading project lab5
-# Compile of lab5_top.v was successful.
-vsim -gui work.lab5_check_1
-# vsim -gui work.lab5_check_1 
-# Start time: 10:31:43 on Aug 01,2020
-# Loading work.lab5_check_1
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-# Loading work.shifter_tb
-# Loading work.shifter
-# Loading work.ALU_tb
-# Loading work.ALU
-# ** Warning: (vsim-3008) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(10): [CNNODP] - Component name (DUT) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(10): Unresolved reference to 'DUT' in T1.DUT.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Warning: (vsim-3008) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(19): [CNNODP] - Component name (DUT) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(19): Unresolved reference to 'DUT' in T2.DUT.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Warning: (vsim-3008) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(25): [CNNODP] - Component name (DUT) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(25): Unresolved reference to 'DUT' in T3.DUT.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# Error loading design
-# End time: 10:31:44 on Aug 01,2020, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 3
+# 0 compiles, 11 failed with no errors.
+# Compile of datapath.v was successful.
+# Compile of datapath_tb.v was successful.
 # Compile of lab5_autograder_check.v was successful.
 # Compile of lab5_top.v was successful.
 # Compile of lab5_top_tb.sv was successful.
 # Compile of regfile.v was successful.
 # Compile of regfile_tb.v was successful.
+# Compile of shifter.v was successful.
+# Compile of shifter_tb.v was successful.
 # Compile of alu.v was successful.
 # Compile of alu_tb.v was successful.
-# Compile of shifter_tb.v was successful.
-# Compile of shifter.v was successful.
-# Compile of datapath.v was successful.
-# Compile of datapath_tb.v was successful.
 # 11 compiles, 0 failed with no errors.
 vsim -gui work.lab5_check_1
 # vsim -gui work.lab5_check_1 
-# Start time: 10:40:31 on Aug 01,2020
+# Start time: 11:54:42 on Oct 15,2020
 # Loading work.lab5_check_1
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.vDFFE
+# Loading work.Mux8
+# Loading work.shifter
+# Loading work.ALU
+add wave -position end  sim:/lab5_check_1/data_in
+add wave -position end  sim:/lab5_check_1/in
+add wave -position end  sim:/lab5_check_1/Ain
+add wave -position end  sim:/lab5_check_1/Bin
+add wave -position end  sim:/lab5_check_1/writenum
+add wave -position end  sim:/lab5_check_1/readnum
+add wave -position end  sim:/lab5_check_1/write
+add wave -position end  sim:/lab5_check_1/clk
+add wave -position end  sim:/lab5_check_1/err
+add wave -position end  sim:/lab5_check_1/shift
+add wave -position end  sim:/lab5_check_1/ALUop
+add wave -position end  sim:/lab5_check_1/data_out
+add wave -position end  sim:/lab5_check_1/sout
+add wave -position end  sim:/lab5_check_1/aout
+add wave -position end  sim:/lab5_check_1/Z
+run -all
+# CHECK #1 DONE: Your register file, shifter and ALU appear compatible with the
+# autograder. ** NOTE ** You must also manually verify you had no simulation
+# warnings (above) and that you have no inferred latches (e.g., using Quartus).
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/lab5_autograder_check.v(80)
+#    Time: 10 ps  Iteration: 0  Instance: /lab5_check_1
+# Break in Module lab5_check_1 at C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/lab5_autograder_check.v line 80
+quit -sim
+vsim -gui work.lab5_check_2
+# End time: 11:55:46 on Oct 15,2020, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 0
+# vsim -gui work.lab5_check_2 
+# Start time: 11:55:46 on Oct 15,2020
+# Loading work.lab5_check_2
 # Loading work.regfile_tb
 # Loading work.regfile
 # Loading work.Dec
@@ -55,30 +62,24 @@ vsim -gui work.lab5_check_1
 # Loading work.shifter
 # Loading work.ALU_tb
 # Loading work.ALU
-# ** Warning: (vsim-3008) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(19): [CNNODP] - Component name (DUT) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(19): Unresolved reference to 'DUT' in T2.DUT.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_1 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# Error loading design
-# End time: 10:40:32 on Aug 01,2020, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 1
-# Compile of shifter_tb.v was successful.
-restart -f
-# No Design Loaded!
-vsim -gui work.lab5_check_1
-# vsim -gui work.lab5_check_1 
-# Start time: 10:42:06 on Aug 01,2020
-# Loading work.lab5_check_1
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-# Loading work.shifter_tb
-# Loading work.shifter
-# Loading work.ALU_tb
-# Loading work.ALU
-add wave -position end sim:/lab5_check_1/*
+add wave -position end  sim:/lab5_check_2/data_in
+add wave -position end  sim:/lab5_check_2/writenum
+add wave -position end  sim:/lab5_check_2/write
+add wave -position end  sim:/lab5_check_2/readnum
+add wave -position end  sim:/lab5_check_2/clk
+add wave -position end  sim:/lab5_check_2/data_out
+add wave -position end  sim:/lab5_check_2/err_rf
+add wave -position end  sim:/lab5_check_2/in
+add wave -position end  sim:/lab5_check_2/shift
+add wave -position end  sim:/lab5_check_2/sout
+add wave -position end  sim:/lab5_check_2/err_sh
+add wave -position end  sim:/lab5_check_2/Ain
+add wave -position end  sim:/lab5_check_2/Bin
+add wave -position end  sim:/lab5_check_2/ALUop
+add wave -position end  sim:/lab5_check_2/out
+add wave -position end  sim:/lab5_check_2/Z
+add wave -position end  sim:/lab5_check_2/err_ALU
+add wave -position end  sim:/lab5_check_2/err
 run -all
 # REG: 0 0 0000000000000101 000 1 xxx xxxxxxxxxxxxxxxx
 # SFT: 0 1111000011001111 xx xxxxxxxxxxxxxxxx
@@ -115,37 +116,17 @@ run -all
 # SFT: 0 1111000011001111 11 1111100001100111
 # ALU: 0 0000000000001111 0000000011111111 11 1111111100000000 0
 # *ALL THE TESTS HAVE BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter_tb.v(54)
-#    Time: 25 ps  Iteration: 0  Instance: /lab5_check_1/T2
-# Break in Module shifter_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter_tb.v line 54
-quit -sim
-# End time: 10:42:51 on Aug 01,2020, Elapsed time: 0:00:45
-# Errors: 0, Warnings: 0
-vsim -gui work.lab5_check_2
-# vsim -gui work.lab5_check_2 
-# Start time: 10:43:03 on Aug 01,2020
-# Loading work.lab5_check_2
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-# Loading work.shifter
-# Loading work.ALU
-add wave -position end sim:/lab5_check_2/*
-run -all
-# CHECK #2 DONE: Your register file, shifter and ALU appear compatible with the
-# autograder. ** NOTE ** You must also manually verify you had no simulation
-# warnings (above) and that you have no inferred latches (e.g., using Quartus).
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(123)
-#    Time: 10 ps  Iteration: 0  Instance: /lab5_check_2
-# Break in Module lab5_check_2 at C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v line 123
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/shifter_tb.v(54)
+#    Time: 25 ps  Iteration: 0  Instance: /lab5_check_2/T2
+# Break in Module shifter_tb at C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/shifter_tb.v line 54
 quit -sim
 vsim -gui work.lab5_check_3
-# End time: 10:44:22 on Aug 01,2020, Elapsed time: 0:01:19
+# End time: 11:56:32 on Oct 15,2020, Elapsed time: 0:00:46
 # Errors: 0, Warnings: 0
 # vsim -gui work.lab5_check_3 
-# Start time: 10:44:22 on Aug 01,2020
+# Start time: 11:56:32 on Oct 15,2020
 # Loading work.lab5_check_3
+# Loading work.datapath_tb
 # Loading work.datapath
 # Loading work.regfile
 # Loading work.Dec
@@ -154,31 +135,16 @@ vsim -gui work.lab5_check_3
 # Loading work.ALU
 # Loading work.shifter
 # Loading work.Mux2a
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(171): This or another usage of 'DUT.REGFILE.R0' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(172): This or another usage of 'DUT.REGFILE.R1' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(173): This or another usage of 'DUT.REGFILE.R2' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(174): This or another usage of 'DUT.REGFILE.R3' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(175): This or another usage of 'DUT.REGFILE.R4' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(176): This or another usage of 'DUT.REGFILE.R5' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(177): This or another usage of 'DUT.REGFILE.R6' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(178): This or another usage of 'DUT.REGFILE.R7' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
+# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/datapath_tb.v(165): Unresolved reference to 'dut'.
+#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3/TB File: C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/datapath_tb.v
 # Error loading design
-# End time: 10:44:23 on Aug 01,2020, Elapsed time: 0:00:01
-# Errors: 8, Warnings: 0
-restart -f
-# No Design Loaded!
+# End time: 11:56:33 on Oct 15,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
 vsim -gui work.lab5_check_3
 # vsim -gui work.lab5_check_3 
-# Start time: 10:57:30 on Aug 01,2020
+# Start time: 11:56:52 on Oct 15,2020
 # Loading work.lab5_check_3
+# Loading work.datapath_tb
 # Loading work.datapath
 # Loading work.regfile
 # Loading work.Dec
@@ -187,41 +153,39 @@ vsim -gui work.lab5_check_3
 # Loading work.ALU
 # Loading work.shifter
 # Loading work.Mux2a
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(171): This or another usage of 'DUT.REGFILE.R0' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(172): This or another usage of 'DUT.REGFILE.R1' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(173): This or another usage of 'DUT.REGFILE.R2' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(174): This or another usage of 'DUT.REGFILE.R3' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(175): This or another usage of 'DUT.REGFILE.R4' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(176): This or another usage of 'DUT.REGFILE.R5' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(177): This or another usage of 'DUT.REGFILE.R6' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
-# ** Error: (vsim-8220) C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(178): This or another usage of 'DUT.REGFILE.R7' inconsistent with 'module' object.
-#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3 File: C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v
+# ** Error: (vsim-3043) C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/datapath_tb.v(165): Unresolved reference to 'dut'.
+#    Time: 0 ps  Iteration: 0  Instance: /lab5_check_3/TB File: C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/datapath_tb.v
 # Error loading design
-# End time: 10:57:31 on Aug 01,2020, Elapsed time: 0:00:01
-# Errors: 8, Warnings: 0
-# Compile of lab5_autograder_check.v was successful.
-# Compile of lab5_top.v was successful.
-# Compile of lab5_top_tb.sv was successful.
-# Compile of regfile.v was successful.
-# Compile of regfile_tb.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_tb.v was successful.
-# Compile of shifter_tb.v was successful.
-# Compile of shifter.v was successful.
-# Compile of datapath.v was successful.
+# End time: 11:56:53 on Oct 15,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Load canceled
 # Compile of datapath_tb.v was successful.
-# 11 compiles, 0 failed with no errors.
 vsim -gui work.lab5_check_3
 # vsim -gui work.lab5_check_3 
-# Start time: 10:57:52 on Aug 01,2020
+# Start time: 12:05:59 on Oct 15,2020
 # Loading work.lab5_check_3
+# Loading work.datapath_tb
+# Loading work.datapath
+# Loading work.regfile
+# Loading work.Dec
+# Loading work.vDFFE
+# Loading work.Mux8
+# Loading work.ALU
+# Loading work.shifter
+# Loading work.Mux2a
+add wave -position end  sim:/lab5_check_3/tb_err
+run -all
+# *THE TEST HAS BEEN PASSED*
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/datapath_tb.v(171)
+#    Time: 80 ps  Iteration: 0  Instance: /lab5_check_3/TB
+# Break in Module datapath_tb at C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/datapath_tb.v line 171
+quit -sim
+vsim -gui work.lab5_check_4
+# End time: 12:06:51 on Oct 15,2020, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 0
+# vsim -gui work.lab5_check_4 
+# Start time: 12:06:51 on Oct 15,2020
+# Loading work.lab5_check_4
 # Loading work.datapath
 # Loading work.regfile
 # Loading work.Dec
@@ -234,44 +198,6 @@ run -all
 # CHECK #3 DONE: Your datapath appears to be compatibile with the autograder.
 # ** NOTE ** You must manually verify you had no simulation warnings
 # (above) and that you have no inferred latches (e.g., using Quartus).
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v(297)
-#    Time: 70 ps  Iteration: 0  Instance: /lab5_check_3
-# Break in Module lab5_check_3 at C:/Users/herei/Desktop/CPEN211/programs/lab5/lab5_autograder_check.v line 297
-quit -sim
-# End time: 10:58:31 on Aug 01,2020, Elapsed time: 0:00:39
-# Errors: 0, Warnings: 0
-vsim -gui work.regfile_tb
-# vsim -gui work.regfile_tb 
-# Start time: 10:58:47 on Aug 01,2020
-# Loading work.regfile_tb
-# Loading work.regfile
-# Loading work.Dec
-# Loading work.vDFFE
-# Loading work.Mux8
-add wave -position end sim:/regfile_tb/*
-run -all
-# Writing 5 to R0
-# Writing 7 to R1
-# Writing 12 to R7
-# Not writing 3 to R1
-# *ALL THE TESTS HAVE BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v(125)
-#    Time: 70 ps  Iteration: 0  Instance: /regfile_tb
-# Break in Module regfile_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/regfile_tb.v line 125
-quit -sim
-# End time: 10:59:23 on Aug 01,2020, Elapsed time: 0:00:36
-# Errors: 0, Warnings: 0
-vsim -gui work.shifter_tb
-# vsim -gui work.shifter_tb 
-# Start time: 11:00:02 on Aug 01,2020
-# Loading work.shifter_tb
-# Loading work.shifter
-run -all
-# Do nothing: shift = 2'b00
-# B shifted left 1-bit, least significant bit is zero. shift = 2'b01
-# B shifted right 1-bit, most significant bit, MSB, is 0. shift = 2'b10
-# B shifted right 1-bit, MSB is copy of B[15]. shift = 2'b11
-# *ALL THE TESTS HAVE BEEN PASSED*
-# ** Note: $stop    : C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter_tb.v(54)
-#    Time: 25 ps  Iteration: 0  Instance: /shifter_tb
-# Break in Module shifter_tb at C:/Users/herei/Desktop/CPEN211/programs/lab5/shifter_tb.v line 54
+# ** Note: $stop    : C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/lab5_autograder_check.v(333)
+#    Time: 70 ps  Iteration: 0  Instance: /lab5_check_4
+# Break in Module lab5_check_4 at C:/Users/herei/Desktop/CPEN/CPEN211_2020_Winter_Labs/From_Github/CPEN211Lab5/lab5_autograder_check.v line 333
